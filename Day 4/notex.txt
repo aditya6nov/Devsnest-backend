@@ -1,0 +1,60 @@
+// How internet works and rest and intro to nodejs
+
+How internet works:
+
+
+// Protocols(sets the rules of data package)
+
+- tcp/ip -> transports data (static file , index.html)
+- http/https -> web access  ()
+- rtp -> live video streaming VOIP calls (youtube live streaming)
+
+
+////
+// Application programming interface
+
+Set of programming codes that enables data transmission between one software product and another
+
+// how api works
+ 
+ web app browser = (reqt/response)= internet = api = web server = database
+
+// three approaches to API release policies
+
+1. private: The API is only for use internally. This gives companies the most control over their API
+2. partner: The API is shared with specific business partners. This can provide additional revenue streams without compromising qualities
+3. Public: The API available to everyone. This allows third parties to develop apps that interact with your API and can be a source for innovation
+
+// REST( representable state transfer)
+
+- simple and standard ( )
+- scalable and stateless ( json used thus stateless)
+- high performance and can be cached( performance high because browser can unerstand js, json thus could be cached)
+
+// RESt API and CRUD
+Create -> POST
+Read   -> GET
+Update -> PUT
+Delete -> DELETE
+
+// Request 
+
+header   ( it act as key for objects)
+param/body
+operations  endpoint
+
+// response 
+
+header ( came from which route, is everything ok or not) 
+json (actaul thing is written in json)
+
+
+/// 
+
+//node.js
+node.js makes api , so above diagram is valid for node.js
+
+-- whywe use node.js
+- js is there , json is there, thus nodejs is used
+- frontend developer could also make rest api
+- as in js thus event loop is used 
