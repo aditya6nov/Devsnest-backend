@@ -1,0 +1,56 @@
+Event loop and async programming
+
+javascript was made for browsers only, browser has least memory and space, so we cant use more than one thread in browsers, specially in older days
+Earlier we were not having any method in which we could haveuse full capacity of system for memory for alotting to websites.
+Nowadays we could use multithreading on frontend part.But still we need to work on single thread for websites.
+Thats why the concept of event loop came into picture
+
+
+// event loop
+
+Event loop is nothing but an algorithm that handles async nature of javascript
+
+//Async nature of javascript
+ 
+Whatsoever heavy task are there if we keep them on hault so that whatsoever are light task could be executed and until then we could get response from heavy tasks.
+
+// What is javascript
+
+A single threaded, non blocking, asynchronous, concurrent language.
+
+Single threaded: it works on single thread, it dont have access to whole system's power, i.e have much less power
+Non-blocking: No process is blocked
+Concurrent: Could work in parallel in some sense
+
+// what javascript have :
+
+Call Stack, An Event loop , A callback queue , some other apis , and stuff
+
+// V8 - an engine which compiles js and it was developed by google
+It have Call Stack And a Heap only
+
+
+// link for V8 compiler : https://user-images.githubusercontent.com/33154959/132024987-a73b4c46-8951-4740-9efa-10e3eaf4fae8.jpeg
+
+Heap: where memory is getting alocated
+Stack: where executation is happening
+
+// The Call Stack
+one thread == one call stack === one thing at a time
+
+/// java script components:
+
+// web APIs - setTimeout, setInterval, event listener - they are provided by websites and are not part of javascript , so that we could treat them as normal apis - so that it could be considered that these are slow things and these are time consuming things
+web APIs have separate storage eg: rest apis have separate storage
+// call stack
+// callback queue
+// event loop
+
+/// working of javascript(event loop website)
+
+// http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D
+
+
+-- whenever there are any rest api then they are stored somewhere
+--- when they are ready then they are pushed into callback queue
+-- but event loop keeps executing for checking if we have something in queue but not in stack then it is being pushed to stack for execution
