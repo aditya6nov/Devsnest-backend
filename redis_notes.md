@@ -67,5 +67,5 @@ num is number of entries I want to consume
 x is how long to block(in milliseconds) in case the stream doesn't yet contain any entries newer(higher in number) than the one whose entry-key I have supplied.
 XREAD BLOCK x STREAMS stream-name $ --> waits for x milliseconds to recieve any entry.
 XTRIM stream-name MAXLEN num --> trims/removes oldest num entries from the stream.
-XADD stream-name MAXLEN num * key1 val1 key2 val2 --> limits the number of max num of entries in the stream to num.
+XADD stream-name MAXLEN num * key1 val1 key2 val2 --> limit the number of max num of entries in the stream to num.
 XLEN stream-name --> returns length of stream.
