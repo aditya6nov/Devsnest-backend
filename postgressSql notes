@@ -30,7 +30,7 @@ sudo -u <role name> psql --> switched to and starts psql command prompt
 
 \c dbname username --> switch connection to new database (dbname) under a user specified by
 
-\l --> list all available databases
+\l --> list all available database
 
 \dt --> list all tables in current database
 
