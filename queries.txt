@@ -73,7 +73,7 @@ DELETE FROM company WHERE id = 1;
 
 
 17)
-CREATE TABLE customers(
+CREATE TABLE customer(
 cust_id INT NOT NULL,
 cust_name VARCHAR(20) NOT NULL,
 PRIMARY KEY(cust_id)
